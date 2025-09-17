@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Award, Users, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import sahyogLogo from "@/assets/sahyog-logo.png";
-import jitubhaiPortrait from "@/assets/jitubhai-portrait.jpg";
+import jitubhaiPortrait from "@/assets/jitubhai-real-portrait.jpg";
 import jitubhaiServingCustomers from "@/assets/jitubhai-serving-customers.jpg";
 import jitubhaiEarlyDays from "@/assets/jitubhai-early-days.jpg";
 
