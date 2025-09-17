@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Award, Users, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import sahyogLogo from "@/assets/sahyog-logo.png";
-import jitubhaiPortrait from "@/assets/jitubhai-real-portrait.jpg";
+import jitubhaiPortrait from "@/assets/jitubhai-pharmacy-portrait.jpg";
 import jitubhaiServingCustomers from "@/assets/jitubhai-serving-customers.jpg";
 import jitubhaiEarlyDays from "@/assets/jitubhai-early-days.jpg";
 
@@ -26,13 +26,13 @@ const History = () => {
               From relocating to Jetpur to serving 5k+ customers across villages - a 24-year journey of dedication and community trust
             </p>
             <div className="mt-8 flex justify-center">
-              <div className="relative">
+              <div className="relative max-w-sm mx-auto">
                 <img 
                   src={jitubhaiPortrait} 
-                  alt="Jitubhai Kalariya - Owner of Sahyog Medical Store" 
-                  className="w-56 h-72 object-contain bg-white/5 rounded-2xl shadow-hero border-4 border-white/20 p-2"
+                  alt="Jitubhai Kalariya - Owner of Sahyog Medical Store in his pharmacy" 
+                  className="w-full h-auto aspect-[4/5] object-cover rounded-2xl shadow-hero border-4 border-white/20"
                 />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/5 to-transparent"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/10 to-transparent"></div>
               </div>
             </div>
           </div>
