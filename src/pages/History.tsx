@@ -3,6 +3,9 @@ import { Badge } from "@/components/ui/badge";
 import { Award, Users, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import sahyogLogo from "@/assets/sahyog-logo.png";
+import jitubhaiPortrait from "@/assets/jitubhai-portrait.jpg";
+import jitubhaiServingCustomers from "@/assets/jitubhai-serving-customers.jpg";
+import jitubhaiEarlyDays from "@/assets/jitubhai-early-days.jpg";
 
 const History = () => {
   return (
@@ -20,8 +23,18 @@ const History = () => {
               The Journey of Jitubhai Kalariya
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A story of determination, service, and building trust in our community for over two decades
+              From relocating to Jetpur to serving 5k+ customers across villages - a 24-year journey of dedication and community trust
             </p>
+            <div className="mt-8 flex justify-center">
+              <div className="relative">
+                <img 
+                  src={jitubhaiPortrait} 
+                  alt="Jitubhai Kalariya - Owner of Sahyog Medical Store" 
+                  className="w-48 h-64 object-cover rounded-2xl shadow-hero border-4 border-white/20"
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -31,41 +44,48 @@ const History = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* The Beginning */}
-            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-blue border-0">
+            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-blue border-0 overflow-hidden">
               <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                      <Clock className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
+                <div className="grid md:grid-cols-2 gap-6 items-center">
                   <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-3">2001 - The Beginning</h3>
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                        <Clock className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-foreground">2001 - The Beginning</h3>
+                    </div>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      With a dream to serve his community and limited resources, Jitubhai Kalariya took the brave step 
-                      of opening Sahyog Medical Store in Jetpur. Starting with just basic medicines and a heart full of 
-                      determination, he believed that everyone deserves access to quality healthcare.
+                      After relocating to Jetpur with a dream to serve the community, Jitubhai Kalariya took the brave step 
+                      of opening Sahyog Medical Store. Starting with just basic medicines and limited resources, he believed 
+                      that everyone deserves access to quality healthcare.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
                       The early days were challenging - long hours, financial constraints, and the responsibility of 
-                      people's health weighed heavily. But Jitubhai's commitment to his community never wavered.
+                      people's health weighed heavily. But Jitubhai's commitment to his new community never wavered.
                     </p>
+                  </div>
+                  <div className="flex justify-center">
+                    <img 
+                      src={jitubhaiEarlyDays} 
+                      alt="Jitubhai in the early days of Sahyog Medical Store" 
+                      className="w-full max-w-sm h-64 object-cover rounded-xl shadow-card"
+                    />
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Building Trust */}
-            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-green border-0">
+            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-green border-0 overflow-hidden">
               <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
-                      <img src={sahyogLogo} alt="Sahyog Medical Store" className="w-8 h-8 object-contain" />
+                <div className="grid md:grid-cols-2 gap-6 items-center">
+                  <div className="order-2 md:order-1">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                        <img src={sahyogLogo} alt="Sahyog Medical Store" className="w-8 h-8 object-contain" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-foreground">Building Trust & Relationships</h3>
                     </div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-3">Building Trust & Relationships</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       Success didn't come overnight. Jitubhai understood that a pharmacy is more than just a business - 
                       it's a pillar of community health. He spent countless hours learning about new medicines, 
@@ -73,9 +93,16 @@ const History = () => {
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
                       His dedication to providing authentic medicines at fair prices, combined with compassionate service, 
-                      slowly but surely earned the trust of Jetpur's residents. Word spread about the honest pharmacist 
-                      who truly cared about his customers' wellbeing.
+                      slowly but surely earned the trust of Jetpur's residents and people from nearby villages. Word spread 
+                      about the honest pharmacist who truly cared about his customers' wellbeing.
                     </p>
+                  </div>
+                  <div className="order-1 md:order-2 flex justify-center">
+                    <img 
+                      src={jitubhaiServingCustomers} 
+                      alt="Jitubhai serving customers with care and dedication" 
+                      className="w-full max-w-sm h-48 object-cover rounded-xl shadow-card"
+                    />
                   </div>
                 </div>
               </CardContent>
@@ -94,8 +121,8 @@ const History = () => {
                     <h3 className="text-2xl font-bold text-foreground mb-3">Growth & Recognition</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       As years passed, Sahyog Medical Store grew not just in size but in reputation. Jitubhai's 
-                      commitment to quality and service attracted customers from neighboring areas. The store expanded 
-                      its inventory, added new services, and became a trusted healthcare destination.
+                      commitment to quality and service attracted customers from neighboring areas and small villages around Jetpur. 
+                      The store expanded its inventory, added new services, and became a trusted healthcare destination for the entire region.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
                       Through economic ups and downs, changing markets, and various challenges, Jitubhai's 
@@ -118,13 +145,17 @@ const History = () => {
                   <div>
                     <h3 className="text-2xl font-bold text-foreground mb-3">Today - A Legacy of Service</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Today, after 23 years of dedicated service, Sahyog Medical Store stands as a testament to 
+                      Today, after 24 years of dedicated service (2001-2025), Sahyog Medical Store stands as a testament to 
                       Jitubhai's vision and hard work. What started as a small pharmacy has become an integral part 
-                      of Jetpur's healthcare ecosystem, serving thousands of families with the same dedication and care.
+                      of the healthcare ecosystem, serving not just Jetpur but also nearby small villages with 5,000+ satisfied customers.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      People from various villages trust Sahyog Medical Store and stay connected with us, bringing their families 
+                      for medicines and healthcare needs. This trust has been built through years of consistent service and genuine care.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
                       Jitubhai's journey inspires us all - showing that with determination, honesty, and genuine care 
-                      for others, one person can make a significant difference in their community. His story continues 
+                      for others, one person can make a significant difference in their community and beyond. His story continues 
                       to motivate others to pursue their dreams while staying true to their values.
                     </p>
                   </div>
