@@ -44,16 +44,16 @@ const History = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* The Beginning */}
-            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-blue border-0 overflow-hidden">
+            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-blue border-0">
               <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-6 items-center">
-                  <div>
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                        <Clock className="w-6 h-6 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-foreground">2001 - The Beginning</h3>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                      <Clock className="w-6 h-6 text-white" />
                     </div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-3">2001 - The Beginning</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       After relocating to Jetpur with a dream to serve the community, Jitubhai Kalariya took the brave step 
                       of opening Sahyog Medical Store. Starting with just basic medicines and limited resources, he believed 
@@ -64,28 +64,21 @@ const History = () => {
                       people's health weighed heavily. But Jitubhai's commitment to his new community never wavered.
                     </p>
                   </div>
-                  <div className="flex justify-center">
-                    <img 
-                      src={jitubhaiEarlyDays} 
-                      alt="Jitubhai in the early days of Sahyog Medical Store" 
-                      className="w-full max-w-sm h-64 object-cover rounded-xl shadow-card"
-                    />
-                  </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Building Trust */}
-            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-green border-0 overflow-hidden">
+            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-green border-0">
               <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-6 items-center">
-                  <div className="order-2 md:order-1">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
-                        <img src={sahyogLogo} alt="Sahyog Medical Store" className="w-8 h-8 object-contain" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-foreground">Building Trust & Relationships</h3>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                      <img src={sahyogLogo} alt="Sahyog Medical Store" className="w-8 h-8 object-contain" />
                     </div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-3">Building Trust & Relationships</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       Success didn't come overnight. Jitubhai understood that a pharmacy is more than just a business - 
                       it's a pillar of community health. He spent countless hours learning about new medicines, 
@@ -96,13 +89,6 @@ const History = () => {
                       slowly but surely earned the trust of Jetpur's residents and people from nearby villages. Word spread 
                       about the honest pharmacist who truly cared about his customers' wellbeing.
                     </p>
-                  </div>
-                  <div className="order-1 md:order-2 flex justify-center">
-                    <img 
-                      src={jitubhaiServingCustomers} 
-                      alt="Jitubhai serving customers with care and dedication" 
-                      className="w-full max-w-sm h-48 object-cover rounded-xl shadow-card"
-                    />
                   </div>
                 </div>
               </CardContent>
