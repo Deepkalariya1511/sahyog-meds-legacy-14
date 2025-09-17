@@ -30,9 +30,9 @@ const History = () => {
                 <img 
                   src={jitubhaiPortrait} 
                   alt="Jitubhai Kalariya - Owner of Sahyog Medical Store" 
-                  className="w-48 h-64 object-cover rounded-2xl shadow-hero border-4 border-white/20"
+                  className="w-56 h-72 object-contain bg-white/5 rounded-2xl shadow-hero border-4 border-white/20 p-2"
                 />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/5 to-transparent"></div>
               </div>
             </div>
           </div>
