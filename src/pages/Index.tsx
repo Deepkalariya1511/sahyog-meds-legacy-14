@@ -16,6 +16,7 @@ import {
 import Navigation from "@/components/Navigation";
 import heroImage from "@/assets/pharmacy-hero.jpg";
 import sahyogLogo from "@/assets/sahyog-logo.png";
+import sahyogStoreFront from "@/assets/sahyog-store-front.jpg";
 
 const Index = () => {
   return (
@@ -199,31 +200,48 @@ const Index = () => {
               </Button>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
-              <Card className="border-0 bg-gradient-to-br from-primary/10 to-primary/20">
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">23+</div>
-                  <div className="text-sm text-muted-foreground">Years of Service</div>
-                </CardContent>
-              </Card>
-              <Card className="border-0 bg-gradient-to-br from-secondary/10 to-secondary/20">
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-secondary mb-2">5000+</div>
-                  <div className="text-sm text-muted-foreground">Happy Customers</div>
-                </CardContent>
-              </Card>
-              <Card className="border-0 bg-gradient-to-br from-secondary/10 to-secondary/20">
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-secondary mb-2">24/7</div>
-                  <div className="text-sm text-muted-foreground">Emergency Service</div>
-                </CardContent>
-              </Card>
-              <Card className="border-0 bg-gradient-to-br from-primary/10 to-primary/20">
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">100%</div>
-                  <div className="text-sm text-muted-foreground">Authentic Medicines</div>
-                </CardContent>
-              </Card>
+            <div className="space-y-6">
+              {/* Real Store Image */}
+              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src={sahyogStoreFront} 
+                  alt="Sahyog Medical Store - Your trusted pharmacy in Jetpur showing authentic medicines and professional service"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <p className="text-sm font-medium">Our Store Today</p>
+                  <p className="text-xs opacity-90">Serving 5000+ families since 2001</p>
+                </div>
+              </div>
+              
+              {/* Stats Grid */}
+              <div className="grid grid-cols-2 gap-4">
+                <Card className="border-0 bg-gradient-to-br from-primary/10 to-primary/20">
+                  <CardContent className="p-4 text-center">
+                    <div className="text-2xl font-bold text-primary mb-1">23+</div>
+                    <div className="text-xs text-muted-foreground">Years of Service</div>
+                  </CardContent>
+                </Card>
+                <Card className="border-0 bg-gradient-to-br from-secondary/10 to-secondary/20">
+                  <CardContent className="p-4 text-center">
+                    <div className="text-2xl font-bold text-secondary mb-1">5000+</div>
+                    <div className="text-xs text-muted-foreground">Happy Customers</div>
+                  </CardContent>
+                </Card>
+                <Card className="border-0 bg-gradient-to-br from-secondary/10 to-secondary/20">
+                  <CardContent className="p-4 text-center">
+                    <div className="text-2xl font-bold text-secondary mb-1">24/7</div>
+                    <div className="text-xs text-muted-foreground">Emergency Service</div>
+                  </CardContent>
+                </Card>
+                <Card className="border-0 bg-gradient-to-br from-primary/10 to-primary/20">
+                  <CardContent className="p-4 text-center">
+                    <div className="text-2xl font-bold text-primary mb-1">100%</div>
+                    <div className="text-xs text-muted-foreground">Authentic Medicines</div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Clock, Mail } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import sahyogStoreExterior from "@/assets/sahyog-store-exterior.jpg";
 
 const Contact = () => {
   return (
@@ -85,6 +86,21 @@ const Contact = () => {
 
               {/* Store Information */}
               <div className="space-y-6">
+                {/* Store Location Image */}
+                <Card className="border-0 overflow-hidden">
+                  <div className="relative">
+                    <img 
+                      src={sahyogStoreExterior} 
+                      alt="Sahyog Medical Store location - Visit us at Bus Station Road, Jetpur for all your healthcare needs"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 text-white">
+                      <p className="font-semibold text-sm">Visit Our Store</p>
+                      <p className="text-xs opacity-90">Bus Station Road, Jetpur</p>
+                    </div>
+                  </div>
+                </Card>
                 <Card className="border-0 bg-gradient-to-br from-primary/10 to-secondary/10">
                   <CardHeader>
                     <CardTitle>About Our Store</CardTitle>

@@ -6,6 +6,7 @@ import sahyogLogo from "@/assets/sahyog-logo.png";
 import jitubhaiPortrait from "@/assets/jitubhai-clear-portrait.jpg";
 import jitubhaiServingCustomers from "@/assets/jitubhai-serving-customers.jpg";
 import jitubhaiEarlyDays from "@/assets/jitubhai-early-days.jpg";
+import sahyogStoreFront from "@/assets/sahyog-store-front.jpg";
 
 const History = () => {
   return (
@@ -140,11 +141,24 @@ const History = () => {
                       People from various villages trust Sahyog Medical Store and stay connected with us, bringing their families 
                       for medicines and healthcare needs. This trust has been built through years of consistent service and genuine care.
                     </p>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed mb-6">
                       Jitubhai's journey inspires us all - showing that with determination, honesty, and genuine care 
                       for others, one person can make a significant difference in their community and beyond. His story continues 
                       to motivate others to pursue their dreams while staying true to their values.
                     </p>
+                    
+                    {/* Current Store Image */}
+                    <div className="mt-6 rounded-xl overflow-hidden shadow-lg">
+                      <img 
+                        src={sahyogStoreFront} 
+                        alt="Sahyog Medical Store today - A testament to 24 years of dedicated service with modern facilities and authentic medicines"
+                        className="w-full h-48 object-cover"
+                      />
+                      <div className="bg-gradient-to-r from-primary/5 to-secondary/5 p-4">
+                        <p className="font-medium text-foreground text-sm">Sahyog Medical Store Today</p>
+                        <p className="text-xs text-muted-foreground">Modern facilities, same trusted service since 2001</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
