@@ -46,10 +46,10 @@ const Navigation = () => {
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+            <a href="tel:+919099802989" className="flex items-center space-x-1 text-sm text-muted-foreground hover:text-primary transition-colors">
               <Phone className="h-4 w-4" />
               <span>9099802989</span>
-            </div>
+            </a>
             <div className="flex items-center space-x-1 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4" />
               <span>Jetpur-360370</span>

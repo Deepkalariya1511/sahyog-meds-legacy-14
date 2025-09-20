@@ -37,8 +37,8 @@ const Contact = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-2xl font-bold text-foreground mb-2">9099802989</p>
-                    <p className="text-muted-foreground">Available during store hours for any queries</p>
+                    <a href="tel:+919099802989" className="text-2xl font-bold text-primary hover:text-primary-glow transition-colors cursor-pointer">9099802989</a>
+                    <p className="text-muted-foreground mt-2">Available during store hours for any queries</p>
                   </CardContent>
                 </Card>
 
@@ -159,9 +159,11 @@ const Contact = () => {
               Our experienced team is here to help with all your healthcare needs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now: 9099802989
+              <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary" asChild>
+                <a href="tel:+919099802989">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now: 9099802989
+                </a>
               </Button>
               <Button variant="outline" size="lg" onClick={() => window.open('https://maps.google.com/?q=Sahyog+Medical+Store,+Bus+Station+Road,+Natraj+Loge,+Jetpur,+Gujarat+360370', '_blank')}>
                 <MapPin className="w-5 h-5 mr-2" />

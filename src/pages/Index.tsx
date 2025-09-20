@@ -51,10 +51,10 @@ const Index = () => {
                   className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary transition-all duration-300"
                   asChild
                 >
-                  <Link to="/contact">
+                  <a href="tel:+919099802989">
                     <Phone className="w-5 h-5 mr-2" />
                     Call: 9099802989
-                  </Link>
+                  </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <Link to="/history">
@@ -286,7 +286,7 @@ const Index = () => {
               <div className="space-y-2 text-sm text-muted-foreground">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span>9099802989</span>
+                  <a href="tel:+919099802989" className="hover:text-primary transition-colors">9099802989</a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4" />
