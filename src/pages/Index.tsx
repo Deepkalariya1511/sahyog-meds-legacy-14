@@ -26,6 +26,13 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20"></div>
+        <div className="absolute inset-0 opacity-5">
+          <img 
+            src={sahyogStoreFront} 
+            alt="Sahyog Medical Store Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -206,7 +213,7 @@ const Index = () => {
                 <img 
                   src={sahyogStoreFront} 
                   alt="Sahyog Medical Store - Your trusted pharmacy in Jetpur showing authentic medicines and professional service"
-                  className="w-full h-64 object-cover"
+                  className="w-full aspect-[4/3] sm:aspect-[16/10] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">

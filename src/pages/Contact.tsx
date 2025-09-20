@@ -92,7 +92,7 @@ const Contact = () => {
                     <img 
                       src={sahyogStoreExterior} 
                       alt="Sahyog Medical Store location - Visit us at Bus Station Road, Jetpur for all your healthcare needs"
-                      className="w-full h-48 object-cover"
+                      className="w-full aspect-[4/3] sm:aspect-[16/10] object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div className="absolute bottom-4 left-4 text-white">
