@@ -1,10 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, Menu, X } from "lucide-react";
+import { useState } from "react";
 import sahyogLogo from "@/assets/sahyog-logo.png";
 
 const Navigation = () => {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
     { path: "/", label: "Home" },
@@ -57,10 +59,50 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <Button variant="outline" size="sm" className="md:hidden">
-            Menu
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="md:hidden"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </Button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden border-t bg-card/95 backdrop-blur">
+            <nav className="container mx-auto px-4 py-4 space-y-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`block px-2 py-3 text-sm font-medium transition-colors hover:text-primary rounded-md hover:bg-muted/50 ${
+                    isActive(item.path) ? "text-primary bg-muted/50" : "text-muted-foreground"
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              
+              {/* Mobile Contact Info */}
+              <div className="pt-4 border-t space-y-2">
+                <a 
+                  href="tel:+919099802989" 
+                  className="flex items-center space-x-2 px-2 py-2 text-sm text-muted-foreground hover:text-primary transition-colors rounded-md hover:bg-muted/50"
+                >
+                  <Phone className="h-4 w-4" />
+                  <span>Call: 9099802989</span>
+                </a>
+                <div className="flex items-center space-x-2 px-2 py-2 text-sm text-muted-foreground">
+                  <MapPin className="h-4 w-4" />
+                  <span>Jetpur-360370</span>
+                </div>
+              </div>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );
