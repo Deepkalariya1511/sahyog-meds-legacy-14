@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Award, Users, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import sahyogLogo from "@/assets/sahyog-logo.png";
-import jitubhaiPortrait from "@/assets/jitubhai-pharmacy-portrait.jpg";
+import jitubhaiPortrait from "@/assets/jitubhai-clear-portrait.jpg";
 import jitubhaiServingCustomers from "@/assets/jitubhai-serving-customers.jpg";
 import jitubhaiEarlyDays from "@/assets/jitubhai-early-days.jpg";
 
@@ -31,6 +31,7 @@ const History = () => {
                   src={jitubhaiPortrait} 
                   alt="Jitubhai Kalariya - Owner of Sahyog Medical Store in his pharmacy" 
                   className="w-full h-auto aspect-[4/5] object-cover rounded-2xl shadow-hero border-4 border-white/20"
+                  style={{ imageRendering: 'crisp-edges', filter: 'none' }}
                 />
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/10 to-transparent"></div>
               </div>
