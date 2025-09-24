@@ -1,111 +1,161 @@
-import { Link, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Phone, MapPin, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import sahyogLogo from "@/assets/sahyog-logo.png";
 
-const Navigation = () => {
+export default function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/history", label: "Our Story" },
-    { path: "/contact", label: "Contact" },
-  ];
 
   const isActive = (path: string) => location.pathname === path;
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
-      <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+    <nav className="sticky top-0 z-50 glass border-b border-primary/10 backdrop-blur-xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="flex h-10 w-10 items-center justify-center">
-              <img src={sahyogLogo} alt="Sahyog Medical Store Logo" className="h-10 w-10 object-contain" />
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="medical-icon">
+              <img 
+                src={sahyogLogo} 
+                alt="Sahyog Medical Store Logo - Trusted Healthcare" 
+                className="h-8 w-8 object-contain"
+              />
             </div>
-            <div>
-              <h1 className="text-lg font-bold text-foreground">Sahyog Medical Store</h1>
-              <p className="text-xs text-muted-foreground">Serving since 2001</p>
+            <div className="hidden sm:block">
+              <h1 className="font-display text-xl lg:text-2xl font-semibold text-gradient">
+                Sahyog Medical
+              </h1>
+              <p className="text-xs text-muted-foreground font-medium">
+                Trusted Since 2001
+              </p>
             </div>
           </Link>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.path) ? "text-primary" : "text-muted-foreground"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link
+              to="/"
+              className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                isActive("/")
+                  ? "text-primary bg-gradient-trust shadow-subtle"
+                  : "text-foreground hover:text-primary hover:bg-gradient-trust/50"
+              }`}
+            >
+              Home
+            </Link>
+            <Link
+              to="/history"
+              className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                isActive("/history")
+                  ? "text-primary bg-gradient-trust shadow-subtle"
+                  : "text-foreground hover:text-primary hover:bg-gradient-trust/50"
+              }`}
+            >
+              Our Story
+            </Link>
+            <Link
+              to="/contact"
+              className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                isActive("/contact")
+                  ? "text-primary bg-gradient-trust shadow-subtle"
+                  : "text-foreground hover:text-primary hover:bg-gradient-trust/50"
+              }`}
+            >
+              Contact
+            </Link>
+          </div>
 
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+919099802989" className="flex items-center space-x-1 text-sm text-muted-foreground hover:text-primary transition-colors">
-              <Phone className="h-4 w-4" />
-              <span>9099802989</span>
-            </a>
-            <div className="flex items-center space-x-1 text-sm text-muted-foreground">
-              <MapPin className="h-4 w-4" />
-              <span>Jetpur-360370</span>
+          {/* Contact Info - Desktop */}
+          <div className="hidden xl:flex items-center space-x-6">
+            <div className="flex items-center space-x-2 text-sm">
+              <Phone className="h-4 w-4 text-primary" />
+              <span className="font-medium text-foreground">9099802989</span>
             </div>
+            <Button variant="premium" size="sm" className="animate-glow">
+              Emergency Call
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <Button 
-            variant="outline" 
-            size="sm" 
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          <Button
+            variant="ghost"
+            size="icon-sm"
+            onClick={toggleMenu}
+            className="lg:hidden"
+            aria-label="Toggle navigation menu"
           >
-            {isMobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden border-t bg-card/95 backdrop-blur">
-            <nav className="container mx-auto px-4 py-4 space-y-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`block px-2 py-3 text-sm font-medium transition-colors hover:text-primary rounded-md hover:bg-muted/50 ${
-                    isActive(item.path) ? "text-primary bg-muted/50" : "text-muted-foreground"
-                  }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
+        {isMenuOpen && (
+          <div className="lg:hidden border-t border-primary/10 bg-gradient-card animate-fade-in">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              <Link
+                to="/"
+                className={`block px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  isActive("/")
+                    ? "text-primary bg-gradient-trust shadow-subtle"
+                    : "text-foreground hover:text-primary hover:bg-gradient-trust/50"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                to="/history"
+                className={`block px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  isActive("/history")
+                    ? "text-primary bg-gradient-trust shadow-subtle"
+                    : "text-foreground hover:text-primary hover:bg-gradient-trust/50"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Our Story
+              </Link>
+              <Link
+                to="/contact"
+                className={`block px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  isActive("/contact")
+                    ? "text-primary bg-gradient-trust shadow-subtle"
+                    : "text-foreground hover:text-primary hover:bg-gradient-trust/50"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </Link>
               
               {/* Mobile Contact Info */}
-              <div className="pt-4 border-t space-y-2">
-                <a 
-                  href="tel:+919099802989" 
-                  className="flex items-center space-x-2 px-2 py-2 text-sm text-muted-foreground hover:text-primary transition-colors rounded-md hover:bg-muted/50"
-                >
-                  <Phone className="h-4 w-4" />
-                  <span>Call: 9099802989</span>
-                </a>
-                <div className="flex items-center space-x-2 px-2 py-2 text-sm text-muted-foreground">
-                  <MapPin className="h-4 w-4" />
-                  <span>Jetpur-360370</span>
+              <div className="pt-4 mt-4 border-t border-primary/10 space-y-3">
+                <div className="flex items-center space-x-3 px-4">
+                  <Phone className="h-4 w-4 text-primary" />
+                  <span className="font-medium text-foreground">9099802989</span>
+                </div>
+                <div className="flex items-center space-x-3 px-4">
+                  <MapPin className="h-4 w-4 text-primary" />
+                  <span className="text-sm text-muted-foreground">Bus Station Road, Jetpur</span>
+                </div>
+                <div className="flex items-center space-x-3 px-4">
+                  <Clock className="h-4 w-4 text-primary" />
+                  <span className="text-sm text-muted-foreground">Open: 7 AM - 10 PM</span>
+                </div>
+                <div className="px-4 pt-2">
+                  <Button variant="premium" size="sm" className="w-full">
+                    Emergency Call
+                  </Button>
                 </div>
               </div>
-            </nav>
+            </div>
           </div>
         )}
       </div>
-    </header>
+    </nav>
   );
-};
-
-export default Navigation;
+}
