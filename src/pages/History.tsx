@@ -1,274 +1,181 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { ArrowLeft, Phone, MapPin, Clock } from "lucide-react";
+import { Award, Users, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
-import jituPortrait from "@/assets/jitubhai-real-portrait.jpg";
-import jituPharmacyPortrait from "@/assets/jitubhai-pharmacy-portrait.jpg";
-import jituServingCustomers from "@/assets/jitubhai-serving-customers.jpg";
-import storeExterior from "@/assets/sahyog-store-exterior.jpg";
-import storeInterior from "@/assets/sahyog-store-interior.jpg";
+import sahyogLogo from "@/assets/sahyog-logo.png";
+import jitubhaiPortrait from "@/assets/jitubhai-clear-portrait.jpg";
+import jitubhaiServingCustomers from "@/assets/jitubhai-serving-customers.jpg";
+import jitubhaiEarlyDays from "@/assets/jitubhai-early-days.jpg";
+import sahyogStoreFront from "@/assets/sahyog-store-front.jpg";
 
 const History = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-
+      
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-primary/5 to-transparent">
+      <section className="relative py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Link to="/" className="inline-flex items-center text-primary hover:text-primary/80 mb-8 transition-colors">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </Link>
-            
-            <Badge variant="secondary" className="mb-6">
-              Our Story
+            <Badge variant="secondary" className="mb-4">
+              Our Legacy
             </Badge>
-            
-            <h1 className="font-display text-4xl lg:text-6xl font-bold text-foreground mb-6">
-              About Sahyog Medical Store
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              The Journey of Jitubhai Kalariya
             </h1>
-            
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Serving Jetpur community with trusted healthcare solutions since 2001
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              From relocating to Jetpur to serving 5k+ customers across villages - a 24-year journey of dedication and community trust
             </p>
+            <div className="mt-8 flex justify-center">
+              <div className="relative max-w-sm mx-auto">
+                <img 
+                  src={jitubhaiPortrait} 
+                  alt="Jitubhai Kalariya - Owner of Sahyog Medical Store in his pharmacy" 
+                  className="w-full h-auto aspect-[4/5] object-cover rounded-2xl shadow-hero border-4 border-white/20"
+                  style={{ imageRendering: 'crisp-edges', filter: 'none' }}
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/10 to-transparent"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Timeline Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            
-            {/* Founder Introduction */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-              <div>
-                <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                  Meet Our Founder
-                </h2>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  <strong>Jitubhai Kalariya</strong> is the founder and heart of Sahyog Medical Store. 
-                  With over two decades of experience in pharmaceutical services, he has dedicated his 
-                  life to providing quality healthcare to the people of Jetpur.
-                </p>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  His vision was simple yet powerful: to create a medical store where every customer 
-                  receives not just medicines, but genuine care and trusted guidance for their health needs.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Under his leadership, Sahyog Medical Store has grown from a small neighborhood pharmacy 
-                  to become one of the most trusted healthcare destinations in Jetpur.
-                </p>
-              </div>
-              <div className="order-first lg:order-last">
-                <Card className="overflow-hidden">
-                  <img 
-                    src={jituPortrait} 
-                    alt="Jitubhai Kalariya - Founder of Sahyog Medical Store"
-                    className="w-full h-96 object-cover"
-                  />
-                </Card>
-              </div>
-            </div>
-
-            {/* Our Journey */}
-            <div className="mb-20">
-              <div className="text-center mb-12">
-                <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                  Our Journey
-                </h2>
-                <p className="text-xl text-muted-foreground">
-                  Two decades of serving our community with dedication
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center">
-                      <Badge variant="outline" className="mr-3">2001</Badge>
-                      The Beginning
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      Sahyog Medical Store was established with a mission to provide authentic 
-                      medicines and healthcare products to the Jetpur community.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center">
-                      <Badge variant="outline" className="mr-3">2024</Badge>
-                      Today
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      Now serving thousands of satisfied customers with 24/7 emergency support 
-                      and a comprehensive range of healthcare solutions.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <Card className="overflow-hidden">
-                  <img 
-                    src={jituPharmacyPortrait} 
-                    alt="Jitubhai Kalariya at his pharmacy"
-                    className="w-full h-64 object-cover"
-                  />
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold text-lg mb-2">Dedicated Service</h3>
-                    <p className="text-muted-foreground">
-                      Jitubhai personally ensures every customer receives the right medication 
-                      and proper guidance for their health needs.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="overflow-hidden">
-                  <img 
-                    src={jituServingCustomers} 
-                    alt="Serving customers with care"
-                    className="w-full h-64 object-cover"
-                  />
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold text-lg mb-2">Personal Care</h3>
-                    <p className="text-muted-foreground">
-                      Every interaction is built on trust, ensuring customers feel valued 
-                      and receive personalized healthcare advice.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-
-            {/* Our Values */}
-            <div className="mb-20">
-              <div className="text-center mb-12">
-                <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                  Our Values
-                </h2>
-                <p className="text-xl text-muted-foreground">
-                  The principles that guide everything we do
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <Card className="text-center">
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <span className="text-2xl">🤝</span>
+          <div className="max-w-4xl mx-auto">
+            {/* The Beginning */}
+            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-blue border-0">
+              <CardContent className="p-8">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                      <Clock className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-semibold text-xl mb-4">Trust</h3>
-                    <p className="text-muted-foreground">
-                      Building lasting relationships through honest service and genuine care for our customers' health.
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-3">2001 - The Beginning</h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      After relocating to Jetpur with a dream to serve the community, Jitubhai Kalariya took the brave step 
+                      of opening Sahyog Medical Store. Starting with just basic medicines and limited resources, he believed 
+                      that everyone deserves access to quality healthcare.
                     </p>
-                  </CardContent>
-                </Card>
+                    <p className="text-muted-foreground leading-relaxed">
+                      The early days were challenging - long hours, financial constraints, and the responsibility of 
+                      people's health weighed heavily. But Jitubhai's commitment to his new community never wavered.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
-                <Card className="text-center">
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <span className="text-2xl">⭐</span>
+            {/* Building Trust */}
+            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-green border-0">
+              <CardContent className="p-8">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                      <img src={sahyogLogo} alt="Sahyog Medical Store" className="w-8 h-8 object-contain" />
                     </div>
-                    <h3 className="font-semibold text-xl mb-4">Quality</h3>
-                    <p className="text-muted-foreground">
-                      Ensuring every product meets the highest standards of quality and authenticity.
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-3">Building Trust & Relationships</h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Success didn't come overnight. Jitubhai understood that a pharmacy is more than just a business - 
+                      it's a pillar of community health. He spent countless hours learning about new medicines, 
+                      understanding customer needs, and building genuine relationships with every person who walked through his doors.
                     </p>
-                  </CardContent>
-                </Card>
+                    <p className="text-muted-foreground leading-relaxed">
+                      His dedication to providing authentic medicines at fair prices, combined with compassionate service, 
+                      slowly but surely earned the trust of Jetpur's residents and people from nearby villages. Word spread 
+                      about the honest pharmacist who truly cared about his customers' wellbeing.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
-                <Card className="text-center">
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <span className="text-2xl">❤️</span>
+            {/* Growth & Recognition */}
+            <Card className="mb-8 bg-gradient-to-br from-card to-primary/5 border-0">
+              <CardContent className="p-8">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                      <Award className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="font-semibold text-xl mb-4">Care</h3>
-                    <p className="text-muted-foreground">
-                      Treating every customer with compassion and providing personalized healthcare guidance.
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-3">Growth & Recognition</h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      As years passed, Sahyog Medical Store grew not just in size but in reputation. Jitubhai's 
+                      commitment to quality and service attracted customers from neighboring areas and small villages around Jetpur. 
+                      The store expanded its inventory, added new services, and became a trusted healthcare destination for the entire region.
                     </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-
-            {/* Store Images */}
-            <div className="mb-20">
-              <div className="text-center mb-12">
-                <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                  Visit Our Store
-                </h2>
-                <p className="text-xl text-muted-foreground">
-                  Experience our welcoming environment and comprehensive healthcare solutions
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <Card className="overflow-hidden">
-                  <img 
-                    src={storeExterior} 
-                    alt="Sahyog Medical Store exterior"
-                    className="w-full h-64 object-cover"
-                  />
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold text-lg mb-2">Store Exterior</h3>
-                    <p className="text-muted-foreground">
-                      Conveniently located in the heart of Jetpur for easy access
+                    <p className="text-muted-foreground leading-relaxed">
+                      Through economic ups and downs, changing markets, and various challenges, Jitubhai's 
+                      principles remained constant: integrity, quality, and genuine care for every customer's health and wellbeing.
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
-                <Card className="overflow-hidden">
-                  <img 
-                    src={storeInterior} 
-                    alt="Sahyog Medical Store interior"
-                    className="w-full h-64 object-cover"
-                  />
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold text-lg mb-2">Store Interior</h3>
-                    <p className="text-muted-foreground">
-                      Well-organized space with comprehensive medicine inventory
+            {/* Today & Legacy */}
+            <Card className="bg-gradient-to-br from-primary/10 to-secondary/10 border-0">
+              <CardContent className="p-8">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-r from-secondary to-primary rounded-full flex items-center justify-center">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground mb-3">Today - A Legacy of Service</h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Today, after 24 years of dedicated service (2001-2025), Sahyog Medical Store stands as a testament to 
+                      Jitubhai's vision and hard work. What started as a small pharmacy has become an integral part 
+                      of the healthcare ecosystem, serving not just Jetpur but also nearby small villages with 5,000+ satisfied customers.
                     </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      People from various villages trust Sahyog Medical Store and stay connected with us, bringing their families 
+                      for medicines and healthcare needs. This trust has been built through years of consistent service and genuine care.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Jitubhai's journey inspires us all - showing that with determination, honesty, and genuine care 
+                      for others, one person can make a significant difference in their community and beyond. His story continues 
+                      to motivate others to pursue their dreams while staying true to their values.
+                    </p>
+                    
+                    {/* Current Store Image */}
+                    <div className="mt-6 rounded-xl overflow-hidden shadow-lg">
+                      <img 
+                        src={sahyogStoreFront} 
+                        alt="Sahyog Medical Store today - A testament to 24 years of dedicated service with modern facilities and authentic medicines"
+                        className="w-full h-48 object-cover"
+                      />
+                      <div className="bg-gradient-to-r from-primary/5 to-secondary/5 p-4">
+                        <p className="font-medium text-foreground text-sm">Sahyog Medical Store Today</p>
+                        <p className="text-xs text-muted-foreground">Modern facilities, same trusted service since 2001</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-display text-3xl lg:text-4xl font-bold mb-6">
-            Experience Trusted Healthcare Today
-          </h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Visit Sahyog Medical Store and experience the difference of personalized, caring service.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" asChild>
-              <Link to="/contact">
-                <MapPin className="w-5 h-5 mr-2" />
-                Visit Our Store
-              </Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild className="bg-white/10 border-white/20 hover:bg-white/20">
-              <a href="tel:+919099802989">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Us Now
-              </a>
-            </Button>
+      {/* Inspiration Quote */}
+      <section className="py-16 bg-gradient-to-r from-primary/5 to-secondary/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <blockquote className="text-2xl md:text-3xl font-medium text-foreground mb-6 italic">
+              "Success is not just about building a business, it's about building trust, 
+              serving your community, and making a positive difference in people's lives."
+            </blockquote>
+            <cite className="text-lg text-muted-foreground">- The Philosophy of Jitubhai Kalariya</cite>
           </div>
         </div>
       </section>
