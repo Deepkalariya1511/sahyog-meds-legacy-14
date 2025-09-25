@@ -15,10 +15,13 @@ import {
   Target
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
-import jituPortrait from "@/assets/jitubhai-portrait.jpg";
+import jituPortrait from "@/assets/jitubhai-real-portrait.jpg";
 import jituEarlyDays from "@/assets/jitubhai-early-days.jpg";
+import jituPharmacyPortrait from "@/assets/jitubhai-pharmacy-portrait.jpg";
+import jituServingCustomers from "@/assets/jitubhai-serving-customers.jpg";
 import storeExterior from "@/assets/sahyog-store-exterior.jpg";
 import storeInterior from "@/assets/sahyog-store-interior.jpg";
+import storeFront from "@/assets/sahyog-store-front.jpg";
 import sahyogLogo from "@/assets/sahyog-logo.png";
 
 const History = () => {
@@ -72,8 +75,8 @@ const History = () => {
               <div className="order-2 lg:order-1">
                 <div className="card-premium overflow-hidden">
                   <img 
-                    src={jituEarlyDays} 
-                    alt="Jitubhai Kalariya in early days establishing Sahyog Medical Store"
+                    src={jituPortrait} 
+                    alt="Jitubhai Kalariya - Founder of Sahyog Medical Store"
                     className="w-full aspect-[4/3] object-cover"
                   />
                 </div>
@@ -86,8 +89,8 @@ const History = () => {
                 <h3 className="font-display text-3xl font-bold mb-4">The Beginning</h3>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   <strong>Jitubhai Kalariya</strong> founded Sahyog Medical Store with a vision to provide 
-                  accessible, authentic healthcare to the Jetpur community. Starting with a small shop 
-                  and big dreams, the foundation was laid for what would become the region's most trusted pharmacy.
+                  accessible, quality healthcare to the people of Jetpur. With years of pharmaceutical experience 
+                  and deep commitment to community health, he established this trusted medical store.
                 </p>
                 <div className="flex items-center space-x-4">
                   <CheckCircle className="w-5 h-5 text-primary" />
@@ -123,8 +126,8 @@ const History = () => {
               <div className="order-2">
                 <div className="card-premium overflow-hidden">
                   <img 
-                    src={storeExterior} 
-                    alt="Sahyog Medical Store exterior showing growth and expansion"
+                    src={jituPharmacyPortrait} 
+                    alt="Jitubhai Kalariya at Sahyog Medical Store serving customers"
                     className="w-full aspect-[4/3] object-cover"
                   />
                 </div>
@@ -136,8 +139,8 @@ const History = () => {
               <div className="order-2 lg:order-1">
                 <div className="card-premium overflow-hidden">
                   <img 
-                    src={storeInterior} 
-                    alt="Modern interior of Sahyog Medical Store with organized medicine displays"
+                    src={jituServingCustomers} 
+                    alt="Jitubhai Kalariya personally serving customers with care and expertise"
                     className="w-full aspect-[4/3] object-cover"
                   />
                 </div>
