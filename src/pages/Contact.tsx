@@ -10,13 +10,16 @@ const Contact = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10 overflow-hidden relative">
+        <div className="absolute inset-0 bg-[image:var(--gradient-mesh)] opacity-40"></div>
+        <div className="absolute top-10 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl opacity-60 animate-float"></div>
+        <div className="absolute bottom-10 right-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl opacity-60 animate-float" style={{animationDelay: '1s'}}></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-slide-up">
               Visit Us Today
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground animate-fade-in" style={{animationDelay: '0.3s'}}>
               Your trusted healthcare partner in Jetpur for over 23 years
             </p>
           </div>
@@ -30,10 +33,10 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Contact Details */}
               <div className="space-y-6">
-                <Card className="border-0 bg-gradient-to-br from-card to-medical-light-blue">
+                <Card className="border-0 bg-gradient-to-br from-card to-medical-light-blue hover:shadow-xl transition-all duration-500 hover:scale-105 group animate-fade-in">
                   <CardHeader>
                     <CardTitle className="flex items-center space-x-2">
-                      <Phone className="h-5 w-5 text-primary" />
+                      <Phone className="h-5 w-5 text-primary group-hover:scale-110 transition-transform duration-300" />
                       <span>Call Us</span>
                     </CardTitle>
                   </CardHeader>
@@ -43,10 +46,10 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="border-0 bg-gradient-to-br from-card to-medical-light-green">
+                <Card className="border-0 bg-gradient-to-br from-card to-medical-light-green hover:shadow-xl transition-all duration-500 hover:scale-105 group animate-fade-in" style={{animationDelay: '0.2s'}}>
                   <CardHeader>
                     <CardTitle className="flex items-center space-x-2">
-                      <MapPin className="h-5 w-5 text-secondary" />
+                      <MapPin className="h-5 w-5 text-secondary group-hover:scale-110 transition-transform duration-300" />
                       <span>Location</span>
                     </CardTitle>
                   </CardHeader>
@@ -59,10 +62,10 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="border-0 bg-gradient-to-br from-card to-primary/5">
+                <Card className="border-0 bg-gradient-to-br from-card to-primary/5 hover:shadow-xl transition-all duration-500 hover:scale-105 group animate-fade-in" style={{animationDelay: '0.4s'}}>
                   <CardHeader>
                     <CardTitle className="flex items-center space-x-2">
-                      <Clock className="h-5 w-5 text-primary" />
+                      <Clock className="h-5 w-5 text-primary group-hover:scale-110 transition-transform duration-300" />
                       <span>Store Hours</span>
                     </CardTitle>
                   </CardHeader>
@@ -87,21 +90,22 @@ const Contact = () => {
               {/* Store Information */}
               <div className="space-y-6">
                 {/* Store Location Image */}
-                <Card className="border-0 overflow-hidden">
+                <Card className="border-0 overflow-hidden hover:shadow-2xl transition-all duration-500 group animate-fade-in" style={{animationDelay: '0.6s'}}>
                   <div className="relative">
                     <img 
                       src={sahyogStoreExterior} 
                       alt="Sahyog Medical Store location - Visit us at Bus Station Road, Jetpur for all your healthcare needs"
-                      className="w-full aspect-[4/3] sm:aspect-[16/10] object-cover"
+                      className="w-full aspect-[4/3] sm:aspect-[16/10] object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute inset-0 bg-[image:var(--gradient-glass)] opacity-30"></div>
                     <div className="absolute bottom-4 left-4 text-white">
-                      <p className="font-semibold text-sm">Visit Our Store</p>
-                      <p className="text-xs opacity-90">Bus Station Road, Jetpur</p>
+                      <p className="font-semibold text-sm drop-shadow-lg">Visit Our Store</p>
+                      <p className="text-xs opacity-90 drop-shadow-lg">Bus Station Road, Jetpur</p>
                     </div>
                   </div>
                 </Card>
-                <Card className="border-0 bg-gradient-to-br from-primary/10 to-secondary/10">
+                <Card className="border-0 bg-gradient-to-br from-primary/10 to-secondary/10 hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in" style={{animationDelay: '0.8s'}}>
                   <CardHeader>
                     <CardTitle>About Our Store</CardTitle>
                   </CardHeader>
@@ -129,7 +133,7 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="border-0 bg-gradient-to-br from-card to-secondary/5">
+                <Card className="border-0 bg-gradient-to-br from-card to-secondary/5 hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in" style={{animationDelay: '1s'}}>
                   <CardHeader>
                     <CardTitle>Why Choose Us?</CardTitle>
                   </CardHeader>
@@ -175,13 +179,13 @@ const Contact = () => {
               Our experienced team is here to help with all your healthcare needs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary" asChild>
+              <Button size="lg" variant="gradient" className="animate-pulse-glow" asChild>
                 <a href="tel:+919099802989">
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now: 9099802989
                 </a>
               </Button>
-              <Button variant="outline" size="lg" onClick={() => window.open('https://maps.google.com/?q=Sahyog+Medical+Store,+Bus+Station+Road,+Natraj+Loge,+Jetpur,+Gujarat+360370', '_blank')}>
+              <Button variant="glass" size="lg" onClick={() => window.open('https://maps.google.com/?q=Sahyog+Medical+Store,+Bus+Station+Road,+Natraj+Loge,+Jetpur,+Gujarat+360370', '_blank')}>
                 <MapPin className="w-5 h-5 mr-2" />
                 Get Directions
               </Button>

@@ -25,7 +25,8 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20"></div>
+        <div className="absolute inset-0 bg-[image:var(--gradient-mesh)] opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10"></div>
         <div className="absolute inset-0 opacity-5">
           <img 
             src={sahyogStoreFront} 
@@ -33,17 +34,19 @@ const Index = () => {
             className="w-full h-full object-cover"
           />
         </div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl opacity-60 animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl opacity-60 animate-float" style={{animationDelay: '1s'}}></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+            <div className="space-y-8 animate-fade-in">
               <div>
-                <Badge variant="secondary" className="mb-4">
+                <Badge variant="secondary" className="mb-4 hover:scale-105 transition-transform duration-300 backdrop-blur-sm">
                   <img src={sahyogLogo} alt="Sahyog Medical Store" className="w-4 h-4 mr-2 object-contain" />
                   Trusted Since 2001
                 </Badge>
-                <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+                <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight animate-slide-up">
                   Your Health,
-                  <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-primary via-primary-glow to-secondary bg-clip-text text-transparent animate-pulse-glow">
                     {" "}Our Priority
                   </span>
                 </h1>
@@ -56,7 +59,8 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary transition-all duration-300"
+                  variant="gradient"
+                  className="animate-pulse-glow"
                   asChild
                 >
                   <a href="tel:+919099802989">
@@ -64,7 +68,7 @@ const Index = () => {
                     Call: 9099802989
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="glass" size="lg" asChild>
                   <Link to="/history">
                     <Award className="w-5 h-5 mr-2" />
                     Our Story
@@ -84,18 +88,19 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative animate-slide-up" style={{animationDelay: '0.3s'}}>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
                 <img 
                   src={heroImage} 
                   alt="Sahyog Medical Store - Your trusted pharmacy in Jetpur"
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-[image:var(--gradient-glass)] opacity-20"></div>
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg border">
+              <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-white/50 hover:scale-105 transition-transform duration-300">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img src={sahyogLogo} alt="Sahyog Medical Store" className="w-8 h-8 object-contain" />
                   </div>
                   <div>
@@ -123,9 +128,9 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-0 bg-gradient-to-br from-card to-medical-light-blue hover:shadow-lg transition-all duration-300">
+            <Card className="border-0 bg-gradient-to-br from-card to-medical-light-blue hover:shadow-xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 group animate-fade-in">
               <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:bg-primary/20">
                   <Pill className="w-6 h-6 text-primary" />
                 </div>
                 <CardTitle>Prescription Medicines</CardTitle>
@@ -137,9 +142,9 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-0 bg-gradient-to-br from-card to-medical-light-green hover:shadow-lg transition-all duration-300">
+            <Card className="border-0 bg-gradient-to-br from-card to-medical-light-green hover:shadow-xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 group animate-fade-in" style={{animationDelay: '0.2s'}}>
               <CardHeader>
-                <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:bg-secondary/20">
                   <Shield className="w-6 h-6 text-secondary" />
                 </div>
                 <CardTitle>OTC Medications</CardTitle>
@@ -151,9 +156,9 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-0 bg-gradient-to-br from-card to-primary/5 hover:shadow-lg transition-all duration-300">
+            <Card className="border-0 bg-gradient-to-br from-card to-primary/5 hover:shadow-xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 group animate-fade-in" style={{animationDelay: '0.4s'}}>
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:bg-gradient-to-br group-hover:from-primary/20 group-hover:to-secondary/20">
                   <Stethoscope className="w-6 h-6 text-primary" />
                 </div>
                 <CardTitle>Health Consultations</CardTitle>
@@ -209,40 +214,41 @@ const Index = () => {
 
             <div className="space-y-6">
               {/* Real Store Image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group">
                 <img 
                   src={sahyogStoreFront} 
                   alt="Sahyog Medical Store - Your trusted pharmacy in Jetpur showing authentic medicines and professional service"
-                  className="w-full aspect-[4/3] sm:aspect-[16/10] object-cover"
+                  className="w-full aspect-[4/3] sm:aspect-[16/10] object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-[image:var(--gradient-glass)] opacity-30"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium">Our Store Today</p>
-                  <p className="text-xs opacity-90">Serving 5000+ families since 2001</p>
+                  <p className="text-sm font-medium drop-shadow-lg">Our Store Today</p>
+                  <p className="text-xs opacity-90 drop-shadow-lg">Serving 5000+ families since 2001</p>
                 </div>
               </div>
               
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-4">
-                <Card className="border-0 bg-gradient-to-br from-primary/10 to-primary/20">
+                <Card className="border-0 bg-gradient-to-br from-primary/10 to-primary/20 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in">
                   <CardContent className="p-4 text-center">
-                    <div className="text-2xl font-bold text-primary mb-1">23+</div>
+                    <div className="text-2xl font-bold text-primary mb-1 animate-pulse-glow">23+</div>
                     <div className="text-xs text-muted-foreground">Years of Service</div>
                   </CardContent>
                 </Card>
-                <Card className="border-0 bg-gradient-to-br from-secondary/10 to-secondary/20">
+                <Card className="border-0 bg-gradient-to-br from-secondary/10 to-secondary/20 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in" style={{animationDelay: '0.1s'}}>
                   <CardContent className="p-4 text-center">
                     <div className="text-2xl font-bold text-secondary mb-1">5000+</div>
                     <div className="text-xs text-muted-foreground">Happy Customers</div>
                   </CardContent>
                 </Card>
-                <Card className="border-0 bg-gradient-to-br from-secondary/10 to-secondary/20">
+                <Card className="border-0 bg-gradient-to-br from-secondary/10 to-secondary/20 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in" style={{animationDelay: '0.2s'}}>
                   <CardContent className="p-4 text-center">
                     <div className="text-2xl font-bold text-secondary mb-1">24/7</div>
                     <div className="text-xs text-muted-foreground">Emergency Service</div>
                   </CardContent>
                 </Card>
-                <Card className="border-0 bg-gradient-to-br from-primary/10 to-primary/20">
+                <Card className="border-0 bg-gradient-to-br from-primary/10 to-primary/20 hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in" style={{animationDelay: '0.3s'}}>
                   <CardContent className="p-4 text-center">
                     <div className="text-2xl font-bold text-primary mb-1">100%</div>
                     <div className="text-xs text-muted-foreground">Authentic Medicines</div>
@@ -268,7 +274,8 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary"
+                variant="gradient"
+                className="animate-pulse-glow"
                 asChild
               >
                 <Link to="/contact">
@@ -276,7 +283,7 @@ const Index = () => {
                   Contact Us Now
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="glass" size="lg" asChild>
                 <Link to="/history">
                   <Users className="w-5 h-5 mr-2" />
                   Learn About Us

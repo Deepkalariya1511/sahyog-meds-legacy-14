@@ -14,27 +14,31 @@ const History = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 bg-gradient-to-r from-primary/10 to-secondary/10 overflow-hidden">
+        <div className="absolute inset-0 bg-[image:var(--gradient-mesh)] opacity-40"></div>
+        <div className="absolute top-10 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl opacity-60 animate-float"></div>
+        <div className="absolute bottom-10 left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl opacity-60 animate-float" style={{animationDelay: '1.5s'}}></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4">
+            <Badge variant="secondary" className="mb-4 hover:scale-105 transition-transform duration-300 backdrop-blur-sm animate-fade-in">
               Our Legacy
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-slide-up">
               The Journey of Jitubhai Kalariya
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               From relocating to Jetpur to serving 5k+ customers across villages - a 24-year journey of dedication and community trust
             </p>
             <div className="mt-8 flex justify-center">
-              <div className="relative max-w-sm mx-auto">
+              <div className="relative max-w-sm mx-auto animate-slide-up" style={{animationDelay: '0.3s'}}>
                 <img 
                   src={jitubhaiPortrait} 
                   alt="Jitubhai Kalariya - Owner of Sahyog Medical Store in his pharmacy" 
-                  className="w-full h-auto aspect-[4/5] object-cover rounded-2xl shadow-hero border-4 border-white/20"
+                  className="w-full h-auto aspect-[4/5] object-cover rounded-2xl shadow-hero border-4 border-white/20 hover:scale-105 transition-transform duration-500 hover:shadow-2xl"
                   style={{ imageRendering: 'crisp-edges', filter: 'none' }}
                 />
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/10 to-transparent"></div>
+                <div className="absolute inset-0 rounded-2xl bg-[image:var(--gradient-glass)] opacity-20"></div>
               </div>
             </div>
           </div>
@@ -46,11 +50,11 @@ const History = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* The Beginning */}
-            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-blue border-0">
+            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-blue border-0 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] group animate-fade-in">
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-xl">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                   </div>
@@ -71,11 +75,11 @@ const History = () => {
             </Card>
 
             {/* Building Trust */}
-            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-green border-0">
+            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-green border-0 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] group animate-fade-in" style={{animationDelay: '0.2s'}}>
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300 hover:shadow-xl">
                       <img src={sahyogLogo} alt="Sahyog Medical Store" className="w-8 h-8 object-contain" />
                     </div>
                   </div>
@@ -97,11 +101,11 @@ const History = () => {
             </Card>
 
             {/* Growth & Recognition */}
-            <Card className="mb-8 bg-gradient-to-br from-card to-primary/5 border-0">
+            <Card className="mb-8 bg-gradient-to-br from-card to-primary/5 border-0 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] group animate-fade-in" style={{animationDelay: '0.4s'}}>
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-xl">
                       <Award className="w-6 h-6 text-white" />
                     </div>
                   </div>
@@ -122,11 +126,11 @@ const History = () => {
             </Card>
 
             {/* Today & Legacy */}
-            <Card className="bg-gradient-to-br from-primary/10 to-secondary/10 border-0">
+            <Card className="bg-gradient-to-br from-primary/10 to-secondary/10 border-0 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] group animate-fade-in" style={{animationDelay: '0.6s'}}>
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-r from-secondary to-primary rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-secondary to-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-xl">
                       <Users className="w-6 h-6 text-white" />
                     </div>
                   </div>
@@ -148,13 +152,13 @@ const History = () => {
                     </p>
                     
                     {/* Current Store Image */}
-                    <div className="mt-6 rounded-xl overflow-hidden shadow-lg">
+                    <div className="mt-6 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group">
                       <img 
                         src={sahyogStoreFront} 
                         alt="Sahyog Medical Store today - A testament to 24 years of dedicated service with modern facilities and authentic medicines"
-                        className="w-full h-48 object-cover"
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
                       />
-                      <div className="bg-gradient-to-r from-primary/5 to-secondary/5 p-4">
+                      <div className="bg-gradient-to-r from-primary/5 to-secondary/5 p-4 backdrop-blur-sm">
                         <p className="font-medium text-foreground text-sm">Sahyog Medical Store Today</p>
                         <p className="text-xs text-muted-foreground">Modern facilities, same trusted service since 2001</p>
                       </div>
