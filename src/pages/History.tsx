@@ -23,22 +23,22 @@ const History = () => {
             <Badge variant="secondary" className="mb-4 hover:scale-105 transition-transform duration-300 backdrop-blur-sm animate-fade-in">
               Our Legacy
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-slide-up">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6 animate-slide-up">
               The Journey of Jitubhai Kalariya
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
               From relocating to Jetpur to serving 5k+ customers across villages - a 24-year journey of dedication and community trust
             </p>
-            <div className="mt-8 flex justify-center">
-              <div className="relative max-w-sm mx-auto animate-slide-up" style={{animationDelay: '0.3s'}}>
+            <div className="mt-6 sm:mt-8 flex justify-center">
+              <div className="relative max-w-xs sm:max-w-sm mx-auto animate-slide-up" style={{animationDelay: '0.3s'}}>
                 <img 
                   src={jitubhaiPortrait} 
                   alt="Jitubhai Kalariya - Owner of Sahyog Medical Store in his pharmacy" 
-                  className="w-full h-auto aspect-[4/5] object-cover rounded-2xl shadow-hero border-4 border-white/20 hover:scale-105 transition-transform duration-500 hover:shadow-2xl"
+                  className="w-full h-auto aspect-[4/5] object-cover rounded-xl sm:rounded-2xl shadow-hero border-2 sm:border-4 border-white/20 hover:scale-105 transition-transform duration-500 hover:shadow-2xl"
                   style={{ imageRendering: 'crisp-edges', filter: 'none' }}
                 />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/10 to-transparent"></div>
-                <div className="absolute inset-0 rounded-2xl bg-[image:var(--gradient-glass)] opacity-20"></div>
+                <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-t from-black/10 to-transparent"></div>
+                <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-[image:var(--gradient-glass)] opacity-20"></div>
               </div>
             </div>
           </div>
@@ -46,26 +46,26 @@ const History = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
             {/* The Beginning */}
-            <Card className="mb-8 bg-gradient-to-br from-card to-medical-light-blue border-0 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] group animate-fade-in">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-xl">
-                      <Clock className="w-6 h-6 text-white" />
+            <Card className="bg-gradient-to-br from-card to-medical-light-blue border-0 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] group animate-fade-in">
+              <CardContent className="p-6 sm:p-8">
+                <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4">
+                  <div className="flex-shrink-0 mx-auto sm:mx-0">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-xl">
+                      <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-3">2001 - The Beginning</h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+                  <div className="text-center sm:text-left">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">2001 - The Beginning</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
                       After relocating to Jetpur with a dream to serve the community, Jitubhai Kalariya took the brave step 
                       of opening Sahyog Medical Store. Starting with just basic medicines and limited resources, he believed 
                       that everyone deserves access to quality healthcare.
                     </p>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       The early days were challenging - long hours, financial constraints, and the responsibility of 
                       people's health weighed heavily. But Jitubhai's commitment to his new community never wavered.
                     </p>

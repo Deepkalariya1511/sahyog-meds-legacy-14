@@ -16,10 +16,10 @@ const Contact = () => {
         <div className="absolute bottom-10 right-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl opacity-60 animate-float" style={{animationDelay: '1s'}}></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-slide-up">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6 animate-slide-up">
               Visit Us Today
             </h1>
-            <p className="text-xl text-muted-foreground animate-fade-in" style={{animationDelay: '0.3s'}}>
+            <p className="text-lg sm:text-xl text-muted-foreground animate-fade-in px-4" style={{animationDelay: '0.3s'}}>
               Your trusted healthcare partner in Jetpur for over 23 years
             </p>
           </div>
@@ -27,12 +27,12 @@ const Contact = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
               {/* Contact Details */}
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
                 <Card className="border-0 bg-gradient-to-br from-card to-medical-light-blue hover:shadow-xl transition-all duration-500 hover:scale-105 group animate-fade-in">
                   <CardHeader>
                     <CardTitle className="flex items-center space-x-2">
@@ -54,9 +54,9 @@ const Contact = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-lg font-semibold text-foreground mb-2">Sahyog Medical Store</p>
-                    <p className="text-muted-foreground mb-4">Bus Station Road, Natraj Loge, Jetpur, Gujarat 360370</p>
-                    <Button variant="outline" size="sm" onClick={() => window.open('https://maps.google.com/?q=Sahyog+Medical+Store,+Bus+Station+Road,+Natraj+Loge,+Jetpur,+Gujarat+360370', '_blank')}>
+                    <p className="text-base sm:text-lg font-semibold text-foreground mb-2">Sahyog Medical Store</p>
+                    <p className="text-sm sm:text-base text-muted-foreground mb-4">Bus Station Road, Natraj Loge, Jetpur, Gujarat 360370</p>
+                    <Button variant="outline" size="sm" className="text-xs sm:text-sm" onClick={() => window.open('https://maps.google.com/?q=Sahyog+Medical+Store,+Bus+Station+Road,+Natraj+Loge,+Jetpur,+Gujarat+360370', '_blank')}>
                       Get Directions
                     </Button>
                   </CardContent>
@@ -70,16 +70,16 @@ const Contact = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-2">
-                      <div className="flex justify-between">
+                    <div className="space-y-2 text-sm sm:text-base">
+                      <div className="flex justify-between items-center">
                         <span className="text-muted-foreground">Monday - Saturday</span>
                         <span className="font-medium">8:00 AM - 9:00 PM</span>
                       </div>
-                      <div className="flex justify-between">
+                      <div className="flex justify-between items-center">
                         <span className="text-muted-foreground">Sunday</span>
                         <span className="font-medium">8:00 AM - 8:00 PM</span>
                       </div>
-                      <div className="pt-2 text-sm text-muted-foreground border-t">
+                      <div className="pt-2 text-xs sm:text-sm text-muted-foreground border-t">
                         Emergency services available 24/7
                       </div>
                     </div>
@@ -88,7 +88,7 @@ const Contact = () => {
               </div>
 
               {/* Store Information */}
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
                 {/* Store Location Image */}
                 <Card className="border-0 overflow-hidden hover:shadow-2xl transition-all duration-500 group animate-fade-in" style={{animationDelay: '0.6s'}}>
                   <div className="relative">
@@ -169,24 +169,24 @@ const Contact = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-primary/5 to-secondary/5">
+      <section className="py-12 sm:py-16 bg-gradient-to-r from-primary/5 to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
               Need Immediate Assistance?
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 px-4">
               Our experienced team is here to help with all your healthcare needs
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="gradient" className="animate-pulse-glow" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+              <Button size="lg" variant="gradient" className="animate-pulse-glow text-sm sm:text-base" asChild>
                 <a href="tel:+919099802989">
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   Call Now: 9099802989
                 </a>
               </Button>
-              <Button variant="glass" size="lg" onClick={() => window.open('https://maps.google.com/?q=Sahyog+Medical+Store,+Bus+Station+Road,+Natraj+Loge,+Jetpur,+Gujarat+360370', '_blank')}>
-                <MapPin className="w-5 h-5 mr-2" />
+              <Button variant="glass" size="lg" className="text-sm sm:text-base" onClick={() => window.open('https://maps.google.com/?q=Sahyog+Medical+Store,+Bus+Station+Road,+Natraj+Loge,+Jetpur,+Gujarat+360370', '_blank')}>
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Get Directions
               </Button>
             </div>
