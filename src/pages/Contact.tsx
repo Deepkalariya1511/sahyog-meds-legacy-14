@@ -179,13 +179,13 @@ const Contact = () => {
               Our experienced team is here to help with all your healthcare needs
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
-              <Button size="lg" variant="gradient" className="animate-pulse-glow text-sm sm:text-base" asChild>
+              <Button size="lg" variant="vibrant" className="text-sm sm:text-base" asChild>
                 <a href="tel:+919099802989">
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   Call Now: 9099802989
                 </a>
               </Button>
-              <Button variant="glass" size="lg" className="text-sm sm:text-base" onClick={() => window.open('https://maps.google.com/?q=Sahyog+Medical+Store,+Bus+Station+Road,+Natraj+Loge,+Jetpur,+Gujarat+360370', '_blank')}>
+              <Button variant="outline" size="lg" className="text-sm sm:text-base" onClick={() => window.open('https://maps.google.com/?q=Sahyog+Medical+Store,+Bus+Station+Road,+Natraj+Loge,+Jetpur,+Gujarat+360370', '_blank')}>
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 Get Directions
               </Button>
